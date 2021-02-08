@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+  </head>
+  <style>
+      *{
+          box-sizing: border-box;
+      }
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    ul{
+        max-width: 1440px;
+        list-style: none;
+        padding:0;
+        display:flex;
+    }
+    li{
+        margin:0 10px;
+        font-size: 18px;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+    li:hover{
+        background:white;
+        color:black;
+        font-weight: 700;
+    }
+    .menu1 {
+      width: 100%;
+      background: black;
+      color:white;
+      display:flex;
+      justify-content: center;
+      margin:0px auto;
+    }
+    .menu2 {
+      margin:30px auto 0;
+        width: 100%;
+        background: black;
+      color:white;
+      display:flex;
+      justify-content: center;
+    }
+    .ul{
+        max-width: 1440px;
+        width: 100%;
+        display:table;
+        table-layout: fixed;
+    }
+    .item{
+        text-align: center;
+        display:table-cell;
+        vertical-align: middle;
+        transition: all 0.5s;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    .item:hover{
+        background:white;
+        color:black;
+        font-weight: 700;
+    }
+  </style>
+  <body>
+    <div class="menu1">
+        <ul>
+            <li>1번항목</li>
+            <li>2번항목</li>
+            <li>3번항목</li>
+            <li>4번항목</li>
+            <li>5번항목</li>
+        </ul>
+    </div>
+
+    <div class="menu2">
+        <div class="ul">
+            <div class="item">1번 항목</div>
+            <div class="item">2번 항목</div>
+            <div class="item">3번 항목</div>
+            <div class="item">4번 항목</div>
+            <div class="item">5번 항목</div>
+        </div>
+    </div>
+  </body>
+</html>
