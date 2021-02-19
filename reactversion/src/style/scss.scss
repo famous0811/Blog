@@ -1,0 +1,6 @@
+.button{
+    background:green;
+    &.click{
+        background:red;
+    }
+}
