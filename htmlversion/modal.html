@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+  </head>
+  <style>
+    #modalWrap {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 3000;
+      animation: appear 0.5s;
+
+      @keyframes appear {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    }
+    #modalBody {
+      position: absolute;
+      background: white;
+      max-width: 720px;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 3em 2em;
+      top: 50%;
+      left: 50%;
+      right: auto;
+      bottom: auto;
+      transform: translate(-50%, -50%);
+      border-radius: 10px;
+      transition: background 0.5s;
+    }
+    #modalBody:focus{
+        outline: 0;
+    }
+  </style>
+  <body>
+      <div id="modalWrap" onclick="alert('모달 중지')">
+          <div id="modalBody" onclick="event.stopPropagation();">
+              modal 
+          </div>
+      </div>
+  </body>
+</html>
